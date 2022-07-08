@@ -88,7 +88,12 @@ body {
 
 /* Шапка */
 
+.header .container {
+  display: flex;
+}
 .header {
+  padding-top: 24px;
+  padding-bottom: 24px;
   background-color: var(--background-der-color);
   border: 1px solid var(--header-line-color);
 }
@@ -101,17 +106,17 @@ body {
 }
 .site-nav.list {
   display: flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
 }
 .site-nav .item + .item {
   margin-left: 50px;
 }
-.info-nav.list {
+.info.list {
   display: flex;
+}
+.info.list {
   margin-left: auto;
 }
-.info-nav .item + .item {
+.info > .item + .item {
   margin-left: 50px;
 }
 .logo {
@@ -126,8 +131,8 @@ body {
 .site-nav .current,
 .site-nav .link:focus,
 .site-nav .link:hover,
-.info-nav .link:focus,
-.info-nav .link:hover {
+.info .link:focus,
+.info .link:hover {
   color: var(--accent-color);
 }
 .link {
@@ -142,18 +147,23 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-.info-nav .link {
+.info > .link {
   color: var(--secondary-text-color);
 }
 
 /* Баннер */
 
 .banner {
+  padding-top: 200px;
+  padding-bottom: 200px;
   text-align: center;
   background-color: var(--secondary-background-color);
 }
 .banner-title {
-  padding-top: 200px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 695px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -165,8 +175,6 @@ body {
 /* Кнопка баннера */
 
 .button-header {
-  margin-top: 30px;
-  margin-bottom: 200px;
   width: 200px;
   height: 50px;
   font-family: inherit;
@@ -178,6 +186,7 @@ body {
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px var(--button-header-border-color);
   border-radius: 4px;
+  border: none;
   cursor: pointer;
 }
 
@@ -220,9 +229,13 @@ body {
 }
 
 /* Чем мы занимаемся */
-
+.directions {
+  padding-top: 0;
+}
+.directions .section-title {
+  margin-bottom: 50px;
+}
 .type-work.list {
-  margin-top: 50px;
   display: flex;
 }
 .type-work .item + .item {
@@ -234,13 +247,14 @@ body {
 .team {
   background-color: var(--background-team-color);
 }
+.team .section-title {
+  margin-bottom: 50px;
+}
 .workers.list {
   display: flex;
   justify-content: space-between;
 }
-.workers {
-  margin-top: 50px;
-}
+
 .job-card + .job-card {
   margin-left: 30px;
 }
@@ -253,7 +267,7 @@ body {
   border-radius: 0px 0px 4px 4px;
 }
 .job-card .name {
-  margin-top: 30px;
+  padding-top: 30px;
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
@@ -269,7 +283,7 @@ body {
 
 /* Футер */
 
-.footer .container {
+.footer {
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -278,24 +292,24 @@ body {
 }
 .footer .logo {
   display: block;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
-
+.link.info {
+  margin-top: 9px;
+}
 .footer-address.list {
   font-size: 14px;
   line-height: 1.71;
 }
 .footer-address .link {
-  display: block;
-  padding-bottom: 9px;
   color: var(--footer-address-link-color);
 }
 .footer .logo,
 .link.address {
   color: var(--accent-text-background-color);
 }
-.footer-address .link:focus,
-.footer-address .link:hover {
+.link.info:focus,
+.link.info:hover {
   color: var(--accent-color);
 }
 
@@ -307,13 +321,13 @@ body {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
-  padding-top: 100px;
 }
 .filter .item + .item {
   margin-left: 8px;
 }
 
 .btn-filter {
+  padding: 6px 22px;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -321,8 +335,9 @@ body {
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
   background-color: var(--backgruund-btn-filter-color);
-  border-color: var(--backgruund-btn-filter-color);
+  /* border-color: var(--backgruund-btn-filter-color); */
   border-radius: 4px;
+  border: none;
   cursor: pointer;
 }
 
@@ -352,8 +367,8 @@ body {
   margin-bottom: 0;
 }
 .work-name {
-  margin-top: 20px;
   margin-bottom: 4px;
+  padding-top: 20px;
   padding-left: 24px;
   padding-right: 24px;
   font-weight: 700;

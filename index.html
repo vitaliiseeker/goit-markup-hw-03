@@ -20,27 +20,30 @@
   <body>
     <!-- Шапка -->
     <header class="header">
-      <nav class="header-nav container">
-        <a class="logo" href="./index.html"><span class="accent">Web</span>Studio</a>
-        <ul class="site-nav list">
-          <li class="item"><a class="link current" href="./index.html">Студия</a></li>
-          <li class="item"><a class="link" href="./portfolio.html">Портфолио</a></li>
-          <li class="item"><a class="link" href="">Контакты</a></li>
-        </ul>
-
-        <ul class="info-nav list">
+      <div class="container">
+        <nav class="header-nav">
+          <a class="logo" href="./index.html"><span class="accent">Web</span>Studio</a>
+          <ul class="site-nav list">
+            <li class="item"><a class="link current" href="./index.html">Студия</a></li>
+            <li class="item"><a class="link" href="./portfolio.html">Портфолио</a></li>
+            <li class="item"><a class="link" href="">Контакты</a></li>
+          </ul>
+        </nav>
+        <ul class="info list">
           <li class="item">
             <a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a>
           </li>
           <li class="item"><a class="link" href="tel:+380961111111">+38 096 111 11 11</a></li>
         </ul>
-      </nav>
+      </div>
     </header>
     <main>
       <!-- Баннер -->
-      <section class="banner">
-        <h1 class="banner-title">Эффективные решения <br />для вашего бизнеса</h1>
-        <button class="button-header" type="button">Заказать услугу</button>
+      <section class="section banner">
+        <div class="container">
+          <h1 class="banner-title">Эффективные решения для вашего бизнеса</h1>
+          <button class="button-header" type="button">Заказать услугу</button>
+        </div>
       </section>
       <!-- Наши преимущества -->
       <section class="section difference">
@@ -75,7 +78,7 @@
         </div>
       </section>
       <!-- Чем мы занимаемся -->
-      <section class="section">
+      <section class="section directions">
         <div class="container">
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="type-work list">
@@ -126,7 +129,7 @@
         <a class="logo" href="./index.html"><span class="accent">Web</span>Studio</a>
         <address>
           <ul class="footer-address list">
-            <li>
+            <li class="item">
               <a
                 class="link address"
                 href="https://goo.gl/maps/piqngm7oDQpEDh6u6"
@@ -135,8 +138,12 @@
                 >г. Киев, пр-т Леси Украинки, 26</a
               >
             </li>
-            <li><a class="link" href="mailto:info@example.com">info@example.com</a></li>
-            <li><a class="link" href="tel:+380991111111">+38 099 111 11 11</a></li>
+            <li class="item">
+              <a class="link info" href="mailto:info@example.com">info@example.com</a>
+            </li>
+            <li class="item">
+              <a class="link info" href="tel:+380991111111">+38 099 111 11 11</a>
+            </li>
           </ul>
         </address>
       </div>
